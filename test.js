@@ -31,6 +31,9 @@ abstract contract Token is ERC20 {
     console.log(_n, 'n');
 
     console.log(1);
+
+    if (_n == 0) { console.log(_n); }
+    if (_n == 0) console.log(_n);
   }
 }
 `;
@@ -50,6 +53,9 @@ abstract contract Token is ERC20 {
     _n++;
 
     _n--;
+
+    if (_n == 0) { }
+    if (_n == 0)
   }
 }
 `;
