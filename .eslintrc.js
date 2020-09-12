@@ -8,6 +8,7 @@ module.exports = {
     'eslint:recommended',
   ],
   'globals': {
+    'process': 'readonly',
     'task': 'readonly',
     'describe': 'readonly',
     'it': 'readonly',

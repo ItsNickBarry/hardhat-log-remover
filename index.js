@@ -11,7 +11,12 @@ const NAME = 'remove-logs';
 const DESC = 'Removes console.log calls and imports from local source files';
 
 task(NAME, DESC, async function (args, bre) {
-  await bre.run(TASK_COMPILE);
+  try {
+    await bre.run(TASK_COMPILE);
+  } catch (e) {
+    console.log('Failed to compile contracts before removing logs.');
+    process.exit(1);
+  }
 
   let sources = await bre.run(TASK_COMPILE_GET_RESOLVED_SOURCES, args);
 
