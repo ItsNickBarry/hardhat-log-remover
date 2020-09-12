@@ -1,6 +1,6 @@
 {
   "name": "buidler-log-remover",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Remove Buidler console.log imports and calls from Solidity source files",
   "keywords": [
