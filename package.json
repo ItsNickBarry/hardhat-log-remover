@@ -2,7 +2,7 @@
   "name": "buidler-log-remover",
   "version": "1.0.1",
   "license": "MIT",
-  "description": "Remove Buidler console.log imports and calls from Solidity source files",
+  "description": "Remove Hardhat console.log imports and calls from Solidity source files",
   "keywords": [
     "buidler",
     "solidity",
@@ -18,10 +18,10 @@
   "author": "Nick Barry",
   "main": "index.js",
   "peerDependencies": {
-    "@nomiclabs/buidler": "^1.4.0"
+    "hardhat": "^2.0.0"
   },
   "devDependencies": {
-    "@nomiclabs/buidler": "^1.4.0",
+    "hardhat": "^2.0.0",
     "eslint": "^7.0.0",
     "mocha": "^8.1.3"
   }
