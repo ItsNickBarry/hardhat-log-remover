@@ -1,9 +1,10 @@
 {
-  "name": "buidler-log-remover",
-  "version": "1.0.1",
+  "name": "hardhat-log-remover",
+  "version": "2.0.0",
   "license": "MIT",
   "description": "Remove Hardhat console.log imports and calls from Solidity source files",
   "keywords": [
+    "harhat",
     "buidler",
     "solidity",
     "smart-contracts",
@@ -14,7 +15,7 @@
     "blockchain",
     "wow"
   ],
-  "repository": "https://github.com/ItsNickBarry/buidler-log-remover",
+  "repository": "https://github.com/ItsNickBarry/hardhat-log-remover",
   "author": "Nick Barry",
   "main": "index.js",
   "peerDependencies": {

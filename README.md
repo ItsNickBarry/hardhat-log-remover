@@ -1,27 +1,27 @@
-# Buidler Log Remover
+# Hardhat Log Remover
 
-Remove Buidler `console.log` imports and calls from Solidity source code.
+Remove Hardhat `console.log` imports and calls from Solidity source code.
 
-This plugin is intended in part to keep version-controlled code free of log statements.  To remove logs from compiled contracts while preserving them in source code, see [buidler-preprocessor](https://github.com/wighawag/buidler-preprocessor).
+Versions of this plugin prior to `2.0.0` were released as `buidler-log-remover`.
 
 ## Installation
 
 ```bash
-yarn add --dev buidler-log-remover
+yarn add --dev hardhat-log-remover
 ```
 
 ## Usage
 
-Load plugin in Buidler config:
+Load plugin in Hardhat config:
 
 ```javascript
-usePlugin('buidler-log-remover');
+require('hardhat-log-remover');
 ```
 
-Run the Buidler task manually:
+Run the Hardhat task manually:
 
 ```bash
-yarn run buidler remove-logs
+yarn run hardhat remove-logs
 ```
 
 Before removing logs, the plugin will ensure that all contracts can be compiled successfully.
