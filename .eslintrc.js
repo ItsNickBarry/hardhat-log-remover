@@ -1,17 +1,18 @@
 module.exports = {
   'env': {
-    'browser': true,
-    'commonjs': true,
+    'node': true,
     'es6': true,
+    'mocha': true,
   },
+  'plugins': [
+    'mocha',
+  ],
   'extends': [
     'eslint:recommended',
+    'plugin:mocha/recommended',
   ],
   'globals': {
-    'process': 'readonly',
     'task': 'readonly',
-    'describe': 'readonly',
-    'it': 'readonly',
   },
   'parserOptions': {
     'ecmaVersion': 2018,
@@ -61,7 +62,5 @@ module.exports = {
         'mode': 'minimum',
       },
     ],
-    // override
-    'vue/max-attributes-per-line': 0,
   },
 };
