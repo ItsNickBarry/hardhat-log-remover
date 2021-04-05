@@ -30,7 +30,10 @@ abstract contract Token is ERC20 {
     _n--;
     console.log(_n, 'n');
 
-    console.log(1);
+    console.logInt(1);
+
+    console.logBytes27(
+      '0x');
 
     if (_n == 0) { console.log(_n); }
     if (_n == 0) console.log(_n);
