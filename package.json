@@ -1,6 +1,6 @@
 {
   "name": "hardhat-log-remover",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "MIT",
   "description": "Remove Hardhat console.log imports and calls from Solidity source files",
   "keywords": [
