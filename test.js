@@ -31,6 +31,7 @@ abstract contract Token is ERC20 {
     console.log(_n, 'n');
 
     console.logInt(1);
+    // console.log(_n, 'n');
 
     console.logBytes27(
       '0x');
