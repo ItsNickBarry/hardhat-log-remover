@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { HardhatPluginError } = require('hardhat/plugins');
 
 const regexp = require('../regexp.js');
 
@@ -13,8 +14,7 @@ task('remove-logs', 'Removes console.log calls and imports from local source fil
   try {
     await hre.run(TASK_COMPILE);
   } catch (e) {
-    console.log('Failed to compile contracts before removing logs.');
-    process.exit(1);
+    throw new HardhatPluginError('failed to compile contracts before removing logs');
   }
 
   const sourcePaths = await hre.run(
