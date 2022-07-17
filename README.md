@@ -9,6 +9,8 @@ This plugin is intended in part to keep version-controlled code free of log stat
 ## Installation
 
 ```bash
+npm install --save-dev hardhat-log-remover
+# or
 yarn add --dev hardhat-log-remover
 ```
 
@@ -22,6 +24,10 @@ require('hardhat-log-remover');
 
 Run the Hardhat task manually:
 
+```bash
+npx hardhat remove-logs
+```
+# or
 ```bash
 yarn run hardhat remove-logs
 ```
