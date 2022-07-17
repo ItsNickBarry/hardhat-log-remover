@@ -10,9 +10,7 @@ This plugin is intended in part to keep version-controlled code free of log stat
 
 ```bash
 npm install --save-dev hardhat-log-remover
-```
 # or
-```bash
 yarn add --dev hardhat-log-remover
 ```
 
