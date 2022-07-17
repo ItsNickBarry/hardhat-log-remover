@@ -9,13 +9,11 @@ This plugin is intended in part to keep version-controlled code free of log stat
 ## Installation
 
 ```bash
-yarn add --dev hardhat-log-remover
-```
-
-or npm
-
-```bash
 npm install --save-dev hardhat-log-remover
+```
+# or
+```bash
+yarn add --dev hardhat-log-remover
 ```
 
 ## Usage
@@ -29,13 +27,11 @@ require('hardhat-log-remover');
 Run the Hardhat task manually:
 
 ```bash
-yarn run hardhat remove-logs
-```
-
-or npx
-
-```bash
 npx hardhat remove-logs
+```
+# or
+```bash
+yarn run hardhat remove-logs
 ```
 
 Before removing logs, the plugin will ensure that all contracts can be compiled successfully.
