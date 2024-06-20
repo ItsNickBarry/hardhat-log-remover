@@ -9,6 +9,7 @@ import {
 } from 'hardhat/builtin-tasks/task-names';
 import { task } from 'hardhat/config';
 import { HardhatPluginError } from 'hardhat/plugins';
+import { ResolvedFile } from 'hardhat/types';
 
 task(
   'remove-logs',
@@ -35,13 +36,9 @@ task(
 
     let count = 0;
 
-    graph.getResolvedFiles().forEach(function ({
-      absolutePath,
-      content,
-    }: {
-      absolutePath: any;
-      content: any;
-    }) {
+    const files: ResolvedFile[] = graph.getResolvedFiles();
+
+    files.forEach(function ({ absolutePath, content }) {
       const { rawContent } = content;
       if (
         rawContent.includes('console.log') ||
