@@ -49,11 +49,3 @@ Setup Husky to format code on commit:
 ```bash
 yarn prepare
 ```
-
-### Testing
-
-Run the unit tests with Mocha:
-
-```bash
-yarn run mocha
-```

@@ -1,5 +1,5 @@
 import { name as pluginName } from '../../package.json';
-import regexp from '../lib/regexp.js';
+import regexp from '../lib/regexp';
 import fs from 'fs';
 import {
   TASK_COMPILE,
