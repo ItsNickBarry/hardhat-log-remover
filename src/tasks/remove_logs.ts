@@ -1,14 +1,14 @@
-const fs = require('fs');
-const { HardhatPluginError } = require('hardhat/plugins');
-
-const regexp = require('../regexp.js');
-
-const {
+import { name as pluginName } from '../../package.json';
+import regexp from '../lib/regexp.js';
+import fs from 'fs';
+import {
   TASK_COMPILE,
   TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS,
   TASK_COMPILE_SOLIDITY_GET_SOURCE_NAMES,
   TASK_COMPILE_SOLIDITY_GET_DEPENDENCY_GRAPH,
-} = require('hardhat/builtin-tasks/task-names');
+} from 'hardhat/builtin-tasks/task-names';
+import { task } from 'hardhat/config';
+import { HardhatPluginError } from 'hardhat/plugins';
 
 task(
   'remove-logs',
@@ -18,6 +18,7 @@ task(
       await hre.run(TASK_COMPILE);
     } catch (e) {
       throw new HardhatPluginError(
+        pluginName,
         'failed to compile contracts before removing logs',
       );
     }
@@ -34,7 +35,13 @@ task(
 
     let count = 0;
 
-    graph.getResolvedFiles().forEach(function ({ absolutePath, content }) {
+    graph.getResolvedFiles().forEach(function ({
+      absolutePath,
+      content,
+    }: {
+      absolutePath: any;
+      content: any;
+    }) {
       const { rawContent } = content;
       if (
         rawContent.includes('console.log') ||

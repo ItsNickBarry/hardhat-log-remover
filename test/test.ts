@@ -1,6 +1,5 @@
-const assert = require('assert');
-
-const regexp = require('./regexp.js');
+import regexp from '../src/lib/regexp';
+import assert from 'assert';
 
 const testString = `
 // SPDX-License-Identifier: MIT
