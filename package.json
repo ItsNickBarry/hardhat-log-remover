@@ -24,6 +24,10 @@
     "prepare": "husky",
     "prettier": "prettier --write ."
   },
+  "files": [
+    "dist/src/",
+    "src/"
+  ],
   "peerDependencies": {
     "hardhat": "^2.0.0"
   },
