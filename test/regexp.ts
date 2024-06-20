@@ -1,6 +1,5 @@
-const assert = require('assert');
-
-const regexp = require('./regexp.js');
+import regexp from '../src/lib/regexp';
+import { expect } from 'chai';
 
 const testString = `
 // SPDX-License-Identifier: MIT
@@ -64,17 +63,20 @@ abstract contract Token is ERC20 {
 
 describe('regular expressions', function () {
   it('remove console.log imports', function () {
-    assert(!testString.replace(regexp.imports, '').includes('console.sol'));
+    expect(testString.replace(regexp.imports, '')).not.to.include(
+      'console.sol',
+    );
   });
 
   it('remove console.log calls', function () {
-    assert(!testString.replace(regexp.calls, '').includes('console.log'));
+    expect(testString.replace(regexp.calls, '')).not.to.include('console.log');
   });
 
   it('leave unrelated code intact', function () {
-    let output = testString
+    const output = testString
       .replace(regexp.imports, '')
       .replace(regexp.calls, '');
-    assert.equal(output, expectedOutput);
+
+    expect(output).to.equal(expectedOutput);
   });
 });
