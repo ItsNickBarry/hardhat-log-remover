@@ -2,8 +2,7 @@ const assert = require('assert');
 
 const regexp = require('./regexp.js');
 
-const testString =
-`
+const testString = `
 // SPDX-License-Identifier: MIT
 
 pragma solidity ^0.7.0;
@@ -42,8 +41,7 @@ abstract contract Token is ERC20 {
 }
 `;
 
-const expectedOutput =
-`
+const expectedOutput = `
 // SPDX-License-Identifier: MIT
 
 pragma solidity ^0.7.0;
@@ -74,7 +72,9 @@ describe('regular expressions', function () {
   });
 
   it('leave unrelated code intact', function () {
-    let output = testString.replace(regexp.imports, '').replace(regexp.calls, '');
+    let output = testString
+      .replace(regexp.imports, '')
+      .replace(regexp.calls, '');
     assert.equal(output, expectedOutput);
   });
 });
