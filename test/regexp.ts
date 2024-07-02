@@ -61,18 +61,18 @@ abstract contract Token is ERC20 {
 }
 `;
 
-describe('regular expressions', function () {
-  it('remove console.log imports', function () {
+describe('regular expressions', () => {
+  it('remove console.log imports', () => {
     expect(testString.replace(regexp.imports, '')).not.to.include(
       'console.sol',
     );
   });
 
-  it('remove console.log calls', function () {
+  it('remove console.log calls', () => {
     expect(testString.replace(regexp.calls, '')).not.to.include('console.log');
   });
 
-  it('leave unrelated code intact', function () {
+  it('leave unrelated code intact', () => {
     const output = testString
       .replace(regexp.imports, '')
       .replace(regexp.calls, '');

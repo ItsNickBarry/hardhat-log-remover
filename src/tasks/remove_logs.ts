@@ -14,7 +14,7 @@ import { ResolvedFile } from 'hardhat/types';
 task(
   'remove-logs',
   'Removes console.log calls and imports from local source files',
-  async function (args, hre) {
+  async (args, hre) => {
     try {
       await hre.run(TASK_COMPILE);
     } catch (e) {
@@ -38,7 +38,7 @@ task(
 
     const files: ResolvedFile[] = graph.getResolvedFiles();
 
-    files.forEach(function ({ absolutePath, content }) {
+    files.forEach(({ absolutePath, content }) => {
       const { rawContent } = content;
       if (
         rawContent.includes('console.log') ||
